@@ -1,7 +1,99 @@
-.table-title {
+div.app {
+  margin: 0.5em;
+}
+
+.loading-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 1em black, sans-serif;
+  padding: 0.5em;
+  padding-top: 0px;
+}
+
+.loading-bar > button {
+  border: 1px solid black;
+  color: white;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 10%;
+}
+
+.enabled {
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering:   -o-crisp-edges;         /* Opera */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background-color: #227a32;
+  transition: all 0.3s ease;
+}
+
+.disabled {
+  background-color: #e6e6e6;
+}
+
+.enabled:hover {
+  background-color: #17912d;
+  transform: scale(1.1);
+}
+
+.status {
+  padding-left: 0.5em;
+}
+
+.fetching {
+  color: blue;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+h1 {
+  text-align: center;
+  font: 1.75em black, sans-serif;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+table {
+  border-collapse: collapse;
+  font: 1em sans-serif;
+}
+
+td, th {
+  padding: 0.5em;
   border: 1px solid black;
 }
 
-.table {
-  border: 1px solid green;
+tr.table-heading {
+  font-size: 1.25em;
+}
+
+tbody {
+  padding: 0px;
+  border: 1px solid black;
+}
+
+tr.subreddit-row:nth-of-type(2n+1) {
+  background-color: #e6e6e6;
+}
+
+td.title {
+  font-style: italic;
+}
+
+td.subscribers {
+  text-align: center;
+}
+
+.subreddit-row > td {
+  vertical-align: top;
 }
