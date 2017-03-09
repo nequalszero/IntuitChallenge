@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = {
   entry: "./src/entry.js",
   output: {
@@ -5,18 +7,54 @@ module.exports = {
   },
   module: {
     loaders: [
+      // {
+      //   test: /\.css$/,
+      //   loader: "style-loader!css-loader"
+      // },
+      // {
+      //   test: /\.css$/,
+      //   loader: 'css-loader',
+      //   query: {
+      //     modules: true,
+      //     localIdentName: '[name]__[local]___[hash:base64:5]'
+      //   }
+      // },
       {
         test: [/\.jsx?$/, /\.js?$/],
-        exclude: /(node_modules)/,
-        loader: 'babel',
+        exclude: /node_modules/,
+        loader: 'babel-loader',
         query: {
-          presets: ['es2015', 'react', 'stage-1']
+          presets: ['react', 'es2015', 'stage-1']
         }
       }
     ]
   },
-  devtool: 'source-map',
+  devtool: 'source-maps',
   resolve: {
-    extensions: ["",".js", ".jsx" ]
+    extensions: [".js", '.jsx', '*'],
   }
 };
+
+
+// module.exports = {
+//   entry: "./src/entry.js",
+//   output: {
+//     filename: "./src/bundle.js"
+//   },
+//   module: {
+//     loaders: [
+//       {
+//         test: [/\.jsx?$/, /\.js?$/],
+//         exclude: /(node_modules)/,
+//         loader: 'babel',
+//         query: {
+//           presets: ['es2015', 'react', 'stage-1']
+//         }
+//       }
+//     ]
+//   },
+//   devtool: 'source-map',
+//   resolve: {
+//     extensions: ["",".js", ".jsx" ]
+//   }
+// };

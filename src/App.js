@@ -1,6 +1,7 @@
 import React from 'react';
 import { fetchSubreddits } from './lib/util';
 import { SubredditTable } from './components';
+// import styles from './style.css';
 
 class App extends React.Component {
   state = {
@@ -27,7 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h2 className="table-title">ReactJS Subreddits</h2>
+        <p>Testing My Hotloader</p>
         <SubredditTable subreddits={this.state.subreddits}/>
       </div>
     );

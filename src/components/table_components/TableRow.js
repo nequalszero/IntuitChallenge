@@ -1,7 +1,7 @@
 import React from 'react';
 
+// Table row containing title, number of subscribers, and description columns.
 const TableRow = ({title, subscribers, public_description}) => {
-  debugger
   return (
     <tr className="subreddit-row">
       <td className="title">{title}</td>
