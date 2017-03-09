@@ -14,4 +14,4 @@ The functions that make the API call are located in `src/lib/util.js`, and the t
 2. Run `npm install`
 3. To open application locally, open `index.html` in the browser.
 
-To easily make changes, start the webpack-dev-server by running `npm start` (short for `webpack-dev-server --hot --inline` as seen in `package.json`) and go to http://localhost:8080/.
+To easily make changes, start the webpack-dev-server by running `npm start` (short for `webpack-dev-server --hot --inline` as seen in `package.json`) and go to `http://localhost:8080/`.
