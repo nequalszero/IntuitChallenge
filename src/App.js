@@ -28,7 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <p>Testing My Hotloader</p>
+        <p>Testing</p>
         <SubredditTable subreddits={this.state.subreddits}/>
       </div>
     );
